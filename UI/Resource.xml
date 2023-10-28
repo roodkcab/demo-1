@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Folder name="GacGenConfig">
+    <Folder name="Cpp">
+      <Text name="SourceFolder">Source</Text>
+      <Text name="Resource">..\HelloWorld.bin</Text>
+      <Text name="NormalInclude">GacUI.h</Text>
+      <Text name="Name">HelloWorld</Text>
+    </Folder>
+  </Folder>
+  <Folder name="MainWindow">
+    <Script>
+      <Workflow>
+        <![CDATA[
+        module helloworld;
+        using system::*;
+
+        namespace helloworld
+        {
+          interface IChat
+          {
+            prop Content : string {not observe}
+            var ContentCell : presentation::compositions::GuiCellComposition* = null;
+            func GetRichContent() : presentation::DocumentModel^;
+          }
+
+          interface IChatGPTViewModel
+          {
+            prop Chats : observe IChat^[] {const, not observe}
+            var ListView : presentation::controls::GuiListControl* = null;
+
+            func AddChat() : void;
+          }
+        }
+        ]]>
+      </Workflow>
+    </Script>
+
+    <Instance name="ChatItemResource">
+      <Instance ref.CodeBehind="false" ref.Class="helloworld::ChatItemTemplate">
+        <ref.Ctor>
+          <![CDATA[
+      {
+        ViewModel.ContentCell = contentCell;
+      }
+    ]]>
+        </ref.Ctor>
+        <ref.Parameter Name="ViewModel" Class="helloworld::IChat"/>
+        <ListItemTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+          <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+            <att.Rows>
+              <CellOption>composeType:MinSize</CellOption>
+              <CellOption>composeType:Absolute absolute:1</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Absolute absolute:640</CellOption>
+            </att.Columns>
+            <Cell ref.Name="contentCell" Site="row:0 column:0">
+              <DocumentLabel EditMode="Selectable" Document-bind="ViewModel.GetRichContent()">
+                <att.BoundsComposition-set AlignmentToParent="left:5 top:15 right:20 bottom:10"/>
+              </DocumentLabel>
+            </Cell>
+            <Cell Site="row:1 column:0">
+              <Bounds AlignmentToParent="left:10 top:0 right:10 bottom:0">
+                <SolidBorder Color="#9C917F"/>
+              </Bounds>
+            </Cell>
+          </Table>
+        </ListItemTemplate>
+      </Instance>
+    </Instance>
+
+    <Instance name="MainWindowResource">
+      <Instance ref.CodeBehind="false" ref.Class="helloworld::MainWindow">
+        <ref.Parameter Name="ViewModel" Class="helloworld::IChatGPTViewModel"/>
+        <Window Text="Hello, world!" ClientSize="x:480 y:320">
+          <att.BoundsComposition-set PreferredMinSize="x:480 y:320"/>
+          <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" CellPadding="5">
+            <att.Rows>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:1.0</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:1.0</_>
+            </att.Columns>
+            <Cell Site="row:0 column:0">
+              <Button Alt="A" Text="Add Chat">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+                <ev.Clicked-eval>
+                  <![CDATA[
+                  {
+                    ViewModel.AddChat();
+                  }
+                ]]>
+                </ev.Clicked-eval>
+              </Button>
+            </Cell>
+            <Cell Site="row:1 column:0">
+              <BindableListView ref.Name="listViewChats" HorizontalAlwaysVisible="false" VerticalAlwaysVisible="false" env.ItemType="helloworld::IChat^">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:10 right:0 bottom:10"/>
+                <att.ItemSource-eval>ViewModel.Chats</att.ItemSource-eval>
+                <att.Arranger-eval><![CDATA[new presentation::controls::list::FreeHeightItemArranger^()]]></att.Arranger-eval>
+                <att.ItemTemplate>helloworld::ChatItemTemplate</att.ItemTemplate>
+                <att.Context-ref>ViewModel</att.Context-ref>
+              </BindableListView>
+            </Cell>
+          </Table>
+        </Window>
+      </Instance>
+    </Instance>
+  </Folder>
+</Resource>

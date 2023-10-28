@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ViewModel\Chat.cpp" />
+    <ClCompile Include="ViewModel\ChatGPTViewModel.cpp" />
+    <ClCompile Include="Lib\GacUI.cpp" />
+    <ClCompile Include="Lib\GacUI.Windows.cpp" />
+    <ClCompile Include="Lib\Skins\DarkSkin\DarkSkin.cpp" />
+    <ClCompile Include="Lib\Vlpp.cpp" />
+    <ClCompile Include="Lib\Vlpp.Windows.cpp" />
+    <ClCompile Include="Lib\VlppGlrParser.cpp" />
+    <ClCompile Include="Lib\VlppGlrParserCompiler.cpp" />
+    <ClCompile Include="Lib\VlppOS.cpp" />
+    <ClCompile Include="Lib\VlppOS.Windows.cpp" />
+    <ClCompile Include="Lib\VlppParser.cpp" />
+    <ClCompile Include="Lib\VlppReflection.cpp" />
+    <ClCompile Include="Lib\VlppRegex.cpp" />
+    <ClCompile Include="Lib\VlppWorkflowLibrary.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="UI\Resource.xml.log\x32\Source\HelloWorldPartialClasses.cpp" />
+    <ClCompile Include="UI\Resource.xml.log\x32\Source\HelloWorldReflection.cpp" />
+    <ClCompile Include="UI\Resource.xml.log\x64\Source\HelloWorldPartialClasses.cpp" />
+    <ClCompile Include="UI\Resource.xml.log\x64\Source\HelloWorldReflection.cpp" />
+    <ClCompile Include="UI\Source\HelloWorldPartialClasses.cpp" />
+    <ClCompile Include="UI\Source\HelloWorldReflection.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ViewModel\Chat.h" />
+    <ClInclude Include="ViewModel\ChatGPTViewModel.h" />
+    <ClInclude Include="Lib\GacUI.h" />
+    <ClInclude Include="Lib\GacUI.Windows.h" />
+    <ClInclude Include="Lib\Skins\DarkSkin\DarkSkin.h" />
+    <ClInclude Include="Lib\Vlpp.h" />
+    <ClInclude Include="Lib\VlppGlrParser.h" />
+    <ClInclude Include="Lib\VlppGlrParserCompiler.h" />
+    <ClInclude Include="Lib\VlppOS.h" />
+    <ClInclude Include="Lib\VlppParser.h" />
+    <ClInclude Include="Lib\VlppReflection.h" />
+    <ClInclude Include="Lib\VlppRegex.h" />
+    <ClInclude Include="Lib\VlppWorkflowLibrary.h" />
+    <ClInclude Include="UI\Resource.xml.log\x32\Source\HelloWorld.h" />
+    <ClInclude Include="UI\Resource.xml.log\x32\Source\HelloWorldPartialClasses.h" />
+    <ClInclude Include="UI\Resource.xml.log\x32\Source\HelloWorldReflection.h" />
+    <ClInclude Include="UI\Resource.xml.log\x64\Source\HelloWorld.h" />
+    <ClInclude Include="UI\Resource.xml.log\x64\Source\HelloWorldPartialClasses.h" />
+    <ClInclude Include="UI\Resource.xml.log\x64\Source\HelloWorldReflection.h" />
+    <ClInclude Include="UI\Source\HelloWorld.h" />
+    <ClInclude Include="UI\Source\HelloWorldPartialClasses.h" />
+    <ClInclude Include="UI\Source\HelloWorldReflection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Lib\GacUI.xml" />
+    <Xml Include="UI\Resource.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HelloWorld.bin" />
+    <None Include="UI\Resource.xml.log\x32\Assembly.bin" />
+    <None Include="UI\Resource.xml.log\x32\Compressed.bin" />
+    <None Include="UI\Resource.xml.log\x32\Resource.bin" />
+    <None Include="UI\Resource.xml.log\x32\ScriptedCompressed.bin" />
+    <None Include="UI\Resource.xml.log\x32\ScriptedResource.bin" />
+    <None Include="UI\Resource.xml.log\x64\Assembly.bin" />
+    <None Include="UI\Resource.xml.log\x64\Compressed.bin" />
+    <None Include="UI\Resource.xml.log\x64\Resource.bin" />
+    <None Include="UI\Resource.xml.log\x64\ScriptedCompressed.bin" />
+    <None Include="UI\Resource.xml.log\x64\ScriptedResource.bin" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1e93b314-731c-488d-a072-74256a54721d}</ProjectGuid>
+    <RootNamespace>demo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions);VCZH_DEBUG_NO_REFLECTION</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Lib;$(ProjectDir)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

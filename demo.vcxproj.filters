@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lib\Skins\DarkSkin\DarkSkin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\GacUI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\GacUI.Windows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Vlpp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Vlpp.Windows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppGlrParser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppGlrParserCompiler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppOS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppOS.Windows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppParser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppReflection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppRegex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VlppWorkflowLibrary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Resource.xml.log\x32\Source\HelloWorldPartialClasses.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Resource.xml.log\x32\Source\HelloWorldReflection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Resource.xml.log\x64\Source\HelloWorldPartialClasses.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Resource.xml.log\x64\Source\HelloWorldReflection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Source\HelloWorldPartialClasses.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Source\HelloWorldReflection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewModel\ChatGPTViewModel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewModel\Chat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lib\Skins\DarkSkin\DarkSkin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\GacUI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\GacUI.Windows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Vlpp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppGlrParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppGlrParserCompiler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppOS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppReflection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppRegex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VlppWorkflowLibrary.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Resource.xml.log\x32\Source\HelloWorld.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Resource.xml.log\x32\Source\HelloWorldPartialClasses.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Resource.xml.log\x32\Source\HelloWorldReflection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Resource.xml.log\x64\Source\HelloWorld.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Resource.xml.log\x64\Source\HelloWorldPartialClasses.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Resource.xml.log\x64\Source\HelloWorldReflection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\HelloWorld.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\HelloWorldPartialClasses.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\HelloWorldReflection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewModel\ChatGPTViewModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewModel\Chat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Lib\GacUI.xml" />
+    <Xml Include="UI\Resource.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resource.xml.log\x32\Assembly.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x32\Compressed.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x32\Resource.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x32\ScriptedCompressed.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x32\ScriptedResource.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x64\Assembly.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x64\Compressed.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x64\Resource.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x64\ScriptedCompressed.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UI\Resource.xml.log\x64\ScriptedResource.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="HelloWorld.bin">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
