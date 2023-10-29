@@ -107,14 +107,21 @@ Closures
 	__vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription(::helloworld::ChatItemTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
+		this->__vwsn_bind_cache_0 = ::vl::Ptr<::helloworld::IChat>();
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsnthis_0->ViewModel.Obj())->GetRichContent();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetRichContent();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	{
+		this->__vwsn_bind_activator_();
 	}
 
 	bool __vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
@@ -122,6 +129,8 @@ Closures
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->ViewModel; } catch(...){ return ::vl::Ptr<::helloworld::IChat>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->RichContentChanged, ::vl::Func<void()>(this, &__vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -142,6 +151,13 @@ Closures
 		if ((! __vwsn_bind_closed_))
 		{
 			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->RichContentChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = ::vl::Ptr<::helloworld::IChat>());
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;

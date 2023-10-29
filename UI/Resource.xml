@@ -20,7 +20,10 @@
           interface IChat
           {
             prop Content : string {not observe}
+            event RichContentChanged();
+            prop RichContent : presentation::DocumentModel^ {GetRichContent : RichContentChanged}
             var ContentCell : presentation::compositions::GuiCellComposition* = null;
+
             func GetRichContent() : presentation::DocumentModel^;
           }
 
@@ -56,7 +59,7 @@
               <CellOption>composeType:Absolute absolute:640</CellOption>
             </att.Columns>
             <Cell ref.Name="contentCell" Site="row:0 column:0">
-              <DocumentLabel EditMode="Selectable" Document-bind="ViewModel.GetRichContent()">
+              <DocumentLabel EditMode="Selectable" Document-bind="ViewModel.RichContent">
                 <att.BoundsComposition-set AlignmentToParent="left:5 top:15 right:20 bottom:10"/>
               </DocumentLabel>
             </Cell>

@@ -8,7 +8,7 @@ namespace helloworld {
 
 	void ChatGPTViewModel::AddChat()
 	{
-		auto answer = Ptr(new Chat(L""));
+		Ptr<Chat> answer = Ptr(new Chat(L""));
 		chats.Insert(0, answer);
 		vl::presentation::controls::GetApplication()->InvokeAsync([=]() {
 			vint height = 0;
@@ -19,7 +19,7 @@ namespace helloworld {
 				answer->AppendContent(chunk);
 				Thread::Sleep(200);
 				vl::presentation::controls::GetApplication()->DelayExecuteInMainThread([=, &height]() {
-					chats.NotifyUpdate(0);
+					answer->RichContentChanged();
 					//scroll->SetPosition(scroll->GetMaxPosition());
 				}, 0);
 			}

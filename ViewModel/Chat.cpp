@@ -92,5 +92,4 @@ namespace helloworld {
 		doc->EditText(TextPos(row, column), TextPos(row, column), false, arr);
 		column += _content.Length();
 	}
-
-}
+};

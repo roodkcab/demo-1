@@ -69,8 +69,10 @@ namespace vl
 				CLASS_MEMBER_METHOD(GetContent, NO_PARAMETER)
 				CLASS_MEMBER_METHOD(GetRichContent, NO_PARAMETER)
 				CLASS_MEMBER_METHOD(SetContent, { L"__vwsn_value_" })
+				CLASS_MEMBER_EVENT(RichContentChanged)
 				CLASS_MEMBER_PROPERTY(Content, GetContent, SetContent)
 				CLASS_MEMBER_FIELD(ContentCell)
+				CLASS_MEMBER_PROPERTY_EVENT_READONLY(RichContent, GetRichContent, RichContentChanged)
 			END_INTERFACE_MEMBER(::helloworld::IChat)
 
 			BEGIN_INTERFACE_MEMBER(::helloworld::IChatGPTViewModel)

@@ -85,6 +85,7 @@ namespace helloworld
 	public:
 		virtual ::vl::WString GetContent() = 0;
 		virtual void SetContent(const ::vl::WString& __vwsn_value_) = 0;
+		::vl::Event<void()> RichContentChanged;
 		::vl::presentation::compositions::GuiCellComposition* ContentCell;
 		virtual ::vl::Ptr<::vl::presentation::DocumentModel> GetRichContent() = 0;
 	};
@@ -190,9 +191,12 @@ Closures
 
 		__vwsnc1_HelloWorld_helloworld_ChatItemTemplateConstructor___vwsn_helloworld_ChatItemTemplate_Initialize__vl_reflection_description_IValueSubscription(::helloworld::ChatItemTemplateConstructor* __vwsnctorthis_0);
 
+		::vl::Ptr<::helloworld::IChat> __vwsn_bind_cache_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0();
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
