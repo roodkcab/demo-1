@@ -19,6 +19,7 @@ namespace helloworld {
 				answer->AppendContent(chunk);
 				Thread::Sleep(200);
 				vl::presentation::controls::GetApplication()->DelayExecuteInMainThread([=, &height]() {
+					answer->ContentChanged();
 					answer->RichContentChanged();
 					//scroll->SetPosition(scroll->GetMaxPosition());
 				}, 0);

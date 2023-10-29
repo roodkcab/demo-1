@@ -51,10 +51,6 @@ namespace vl
 				{
 					INVOKEGET_INTERFACE_PROXY_NOPARAMS(GetRichContent);
 				}
-				void SetContent(const ::vl::WString& __vwsn_value_) override
-				{
-					INVOKE_INTERFACE_PROXY(SetContent, __vwsn_value_);
-				}
 			END_INTERFACE_PROXY(::helloworld::IChat)
 
 			BEGIN_INTERFACE_PROXY_NOPARENT_SHAREDPTR(::helloworld::IChatGPTViewModel)

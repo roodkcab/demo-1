@@ -12,7 +12,6 @@ private:
 public:
 	Chat(const vl::WString& _content);
 	::vl::WString GetContent() override;
-	void SetContent(const::vl::WString& __vwsn_value_) override;
 	::vl::Ptr<::vl::presentation::DocumentModel> GetRichContent() override;
 
 	void AppendContent(const vl::WString& __vwsn_value_);

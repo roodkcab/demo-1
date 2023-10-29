@@ -83,10 +83,10 @@ namespace helloworld
 		friend struct ::vl::reflection::description::CustomTypeDescriptorSelector<IChat>;
 #endif
 	public:
-		virtual ::vl::WString GetContent() = 0;
-		virtual void SetContent(const ::vl::WString& __vwsn_value_) = 0;
+		::vl::Event<void()> ContentChanged;
 		::vl::Event<void()> RichContentChanged;
 		::vl::presentation::compositions::GuiCellComposition* ContentCell;
+		virtual ::vl::WString GetContent() = 0;
 		virtual ::vl::Ptr<::vl::presentation::DocumentModel> GetRichContent() = 0;
 	};
 

@@ -71,11 +71,7 @@ namespace helloworld {
 
 	::vl::WString helloworld::Chat::GetContent()
 	{
-		return ::vl::WString();
-	}
-
-	void helloworld::Chat::SetContent(const::vl::WString& __vwsn_value_)
-	{
+		return content;
 	}
 
 	::vl::Ptr<::vl::presentation::DocumentModel> helloworld::Chat::GetRichContent()
@@ -87,9 +83,10 @@ namespace helloworld {
 	{
 		console::Console::Write(_content);
 		content += _content;
-		vl::collections::Array<WString> arr(1);
+		doc = GenDoc(content);
+		/*vl::collections::Array<WString> arr(1);
 		arr.Set(0, _content);
-		doc->EditText(TextPos(row, column), TextPos(row, column), false, arr);
-		column += _content.Length();
+		doc->EditText(TextPos(row, column), TextPos(row, column), true, arr);
+		column += _content.Length();*/
 	}
 };
